@@ -3,8 +3,17 @@ package fo;
 import java.util.ArrayList;
 
 public class Player {
-	private ArrayList<Playground> bookedPlaygrounds = new ArrayList<Playground>();
-	public ArrayList<Playground> searchForPlaygrounds() {
-		return bookedPlaygrounds;
-	}
+	ControlData database = new ControlData();
+    private ProfileData obj = new ProfileData();
+    private ArrayList<Playground> bookedPlaygrounds = new ArrayList<Playground>();
+    Player(){}
+
+    Player(ProfileData info) {
+        obj = info;
+    }
+
+    public ProfileData getProfileData() {
+        return obj;
+    }
+
 }

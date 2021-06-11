@@ -5,14 +5,16 @@ import java.util.ArrayList;
 //Since Java doesn't support Struct we will use a class as a Struct
 public class ProfileData {
 	private String name;
-	private int id;
-	private int password;
+	static private int id;
+	private String password;
 	private String email;
-	private int phone;
+	private String phone;
 	private String location;
 	private ArrayList<Playground> bookedPlaygrounds = new ArrayList<Playground>();
+	
 	ProfileData(){}
-	ProfileData(String name, int id, int password, String email, int phone, String location){
+	
+	ProfileData(String name, int id,String password, String email, String phone, String location){
 		this.name = name;
 		this.id = id;
 		this.password = password;
@@ -20,6 +22,7 @@ public class ProfileData {
 		this.phone = phone;
 		this.location = location;
 	}
+	
 	public int getId() {
 		return id;
 	}
@@ -32,10 +35,10 @@ public class ProfileData {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getPassword() {
+	public String getPassword() {
 		return password;
 	}
-	public void setPassword(int password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 	public String getEmail() {
@@ -44,10 +47,10 @@ public class ProfileData {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getLocation() {
@@ -62,5 +65,4 @@ public class ProfileData {
 	public void setBookedPlaygrounds(Playground bookedPlaygrounds) {
 		this.bookedPlaygrounds.add(bookedPlaygrounds);
 	}
-	
 }

@@ -8,4 +8,15 @@ public class PlaygroundOwner extends Player {
     PlaygroundOwner(ProfileData profile) {
         super(profile);
     }
+    
+    public void registerPlayground(String name, String location, int size, int avaHours[], float price, int cancelPeriod) {
+		idPlayground++;
+		Playground ownerPlayground = new Playground(idPlayground, name, location, size, avaHours, price, cancelPeriod);
+		eachOwnerPlaygrounds.add(ownerPlayground);
+		database.fillPlaygroundsOwners(this);
+	}
+	
+	public ArrayList<Playground> getOwnerPlaygrounds(){
+		return eachOwnerPlaygrounds;
+	}
 }

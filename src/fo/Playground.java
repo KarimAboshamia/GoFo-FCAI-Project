@@ -7,12 +7,12 @@ public class Playground {
 	private String name;
 	private String location;
 	private int size;
-	private float availableHours[];
+	private int availableHours[];
 	private float pricePerHour;
 	private int cancelPeriod;
 	private boolean approaved;
-	
-	Playground(int id, String name, String location, int size, float availableHours[], float pricePerHour, int cancelPeriod){
+	Playground(){}
+	Playground(int id, String name, String location, int size, int availableHours[], float pricePerHour, int cancelPeriod){
 		this.id = id;
 		this.name = name;
 		this.location = location;
@@ -46,10 +46,10 @@ public class Playground {
 	public void setSize(int size) {
 		this.size = size;
 	}
-	public float[] getAvailableHours() {
+	public int[] getAvailableHours() {
 		return availableHours;
 	}
-	public void setAvailableHours(float availableHours[]) {
+	public void setAvailableHours(int availableHours[]) {
 		this.availableHours = availableHours;
 	}
 	public int getCancelPeriod() {
